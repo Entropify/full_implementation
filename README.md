@@ -7,29 +7,29 @@
  - [ ] SLLI  rd, rs1, shamt
  - [ ] SRLI  rd, rs1, shamt
  - [ ] SRAI  rd, rs1, shamt
- - [ ] ADD   rd, rs1, rs2
- - [ ] SUB   rd, rs1, rs2
+ - [x] ADD   rd, rs1, rs2
+ - [x] SUB   rd, rs1, rs2
  - [ ] SLL   rd, rs1, rs2
  - [ ] SLT   rd, rs1, rs2
  - [ ] SLTU  rd, rs1, rs2
  - [ ] SRL   rd, rs1, rs2
  - [ ] SRA   rd, rs1, rs2
  - [ ] XOR   rd, rs1, rs2
- - [ ] OR    rd, rs1, rs2
- - [ ] AND   rd, rs1, rs2
+ - [x] OR    rd, rs1, rs2
+ - [x] AND   rd, rs1, rs2
  - [ ] LUI   rd, imm
  - [ ] AUIPC rd, imm
  - [ ] LB    rd, offset(rs1)
  - [ ] LH    rd, offset(rs1)
- - [ ] LW    rd, offset(rs1)
+ - [x] LW    rd, offset(rs1)
  - [ ] LBU   rd, offset(rs1)
  - [ ] LHU   rd, offset(rs1)
  - [ ] SB    rs2, offset(rs1)
  - [ ] SH    rs2, offset(rs1)
- - [ ] SW    rs2, offset(rs1)
+ - [x] SW    rs2, offset(rs1)
  - [ ] JAL   rd, offset
  - [ ] JALR  rd, offset(rs1)
- - [ ] BEQ   rs1, rs2, offset
+ - [x] BEQ   rs1, rs2, offset
  - [ ] BNE   rs1, rs2, offset
  - [ ] BLT   rs1, rs2, offset
  - [ ] BGE   rs1, rs2, offset
