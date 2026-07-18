@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.126 (w)1999-2026 BSI
+[*] Thu Jul 16 07:07:56 2026
+[*]
+[dumpfile] "/mnt/x/project-soliloquy/sim/tb_control_unit.vcd"
+[dumpfile_mtime] "Thu Jul 16 07:04:52 2026"
+[dumpfile_size] 988
+[savefile] "/mnt/x/project-soliloquy/sim/tb_control_unit.gtkw"
+[timestart] 0
+[size] 1292 642
+[pos] -1 -1
+*-14.000000 24000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_control_unit.
+[sst_width] 297
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 172
+@22
+tb_control_unit.control_in[6:0]
+@28
+tb_control_unit.branch
+tb_control_unit.mem_read
+tb_control_unit.mem_to_reg
+tb_control_unit.alu_op[1:0]
+tb_control_unit.mem_write
+tb_control_unit.alu_src
+tb_control_unit.reg_write
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,23 @@
+[*]
+[*] GTKWave Analyzer v3.3.126 (w)1999-2026 BSI
+[*] Thu Jul 16 06:22:59 2026
+[*]
+[dumpfile] "/mnt/x/project-soliloquy/sim/tb_imm_gen.vcd"
+[dumpfile_mtime] "Thu Jul 16 06:18:31 2026"
+[dumpfile_size] 1197
+[savefile] "/mnt/x/project-soliloquy/sim/tb_imm_gen.gtkw"
+[timestart] 12910
+[size] 1452 600
+[pos] -1 -1
+*-14.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_imm_gen.
+[sst_width] 297
+[signals_width] 190
+[sst_expanded] 1
+[sst_vpaned_height] 157
+@22
+tb_imm_gen.imm_gen_out[31:0]
+@23
+tb_imm_gen.instruction_in[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
