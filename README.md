@@ -1,4 +1,4 @@
-#List of stuff todo (sigh)
+# List of stuff todo (sigh)
  - [x] ADDI  rd, rs1, imm
  - [x] SLTI  rd, rs1, imm
  - [x] SLTIU rd, rs1, imm
