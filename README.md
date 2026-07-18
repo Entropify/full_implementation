@@ -1,20 +1,21 @@
- - [ ] ADDI  rd, rs1, imm
- - [ ] SLTI  rd, rs1, imm
- - [ ] SLTIU rd, rs1, imm
- - [ ] ANDI  rd, rs1, imm
- - [ ] ORI   rd, rs1, imm
- - [ ] XORI  rd, rs1, imm
- - [ ] SLLI  rd, rs1, shamt
- - [ ] SRLI  rd, rs1, shamt
- - [ ] SRAI  rd, rs1, shamt
+#List of stuff todo (sigh)
+ - [x] ADDI  rd, rs1, imm
+ - [x] SLTI  rd, rs1, imm
+ - [x] SLTIU rd, rs1, imm
+ - [x] ANDI  rd, rs1, imm
+ - [x] ORI   rd, rs1, imm
+ - [x] XORI  rd, rs1, imm
+ - [x] SLLI  rd, rs1, shamt
+ - [x] SRLI  rd, rs1, shamt
+ - [x] SRAI  rd, rs1, shamt
  - [x] ADD   rd, rs1, rs2
  - [x] SUB   rd, rs1, rs2
- - [ ] SLL   rd, rs1, rs2
- - [ ] SLT   rd, rs1, rs2
- - [ ] SLTU  rd, rs1, rs2
- - [ ] SRL   rd, rs1, rs2
- - [ ] SRA   rd, rs1, rs2
- - [ ] XOR   rd, rs1, rs2
+ - [x] SLL   rd, rs1, rs2
+ - [x] SLT   rd, rs1, rs2
+ - [x] SLTU  rd, rs1, rs2
+ - [x] SRL   rd, rs1, rs2
+ - [x] SRA   rd, rs1, rs2
+ - [x] XOR   rd, rs1, rs2
  - [x] OR    rd, rs1, rs2
  - [x] AND   rd, rs1, rs2
  - [ ] LUI   rd, imm
