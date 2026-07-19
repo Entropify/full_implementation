@@ -31,11 +31,11 @@
  - [ ] JAL   rd, offset
  - [ ] JALR  rd, offset(rs1)
  - [x] BEQ   rs1, rs2, offset
- - [ ] BNE   rs1, rs2, offset
- - [ ] BLT   rs1, rs2, offset
- - [ ] BGE   rs1, rs2, offset
- - [ ] BLTU  rs1, rs2, offset
- - [ ] BGEU  rs1, rs2, offset
+ - [x] BNE   rs1, rs2, offset
+ - [x] BLT   rs1, rs2, offset
+ - [x] BGE   rs1, rs2, offset
+ - [x] BLTU  rs1, rs2, offset
+ - [x] BGEU  rs1, rs2, offset
  - [ ] FENCE pred, succ
  - [ ] ECALL
  - [ ] EBREAK
