@@ -37,6 +37,20 @@
   wire [31:0] read_data2;
   wire [31:0] writeback_data;
 
+  wire take_branch_signal;
+
+
+
+// branch comp
+
+  branch_comp cpu_branch_comp(
+    .data_1(read_data1),
+    .data_2(read_data2),
+    .func_3(instruction[14:12]),
+    .take_branch(take_branch_signal)
+  );
+
+
 // pc
 
   wire [31:0] pc_out;
@@ -56,7 +70,7 @@
 
   assign pc_plus_4 = pc_out + 32'd4;
   assign pc_branch_target = pc_out + imm_gen_out;
-  assign pc_next = (branch && zero_flag) ? pc_branch_target : pc_plus_4;
+  assign pc_next = (branch && take_branch_signal) ? pc_branch_target : pc_plus_4;
 
 
 // control unit
