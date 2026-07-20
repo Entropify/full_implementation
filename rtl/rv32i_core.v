@@ -28,10 +28,12 @@
   wire zero_flag;
   
   wire branch;
-  wire mem_to_reg;
+  wire [1:0] mem_to_reg;
   wire [1:0] alu_op;
-  wire alu_src;
+  wire alu_src1;
+  wire alu_src2;
   wire reg_write;
+  wire [1:0] pc_src;
 
   wire [31:0] read_data1;
   wire [31:0] read_data2;
@@ -68,14 +70,17 @@
     .pc_out(pc_out)
   );
 
+  wire take_branch = branch && take_branch_signal;
+
   assign pc_plus_4 = pc_out + 32'd4;
   assign pc_branch_target = pc_out + imm_gen_out;
-  assign pc_next = (branch && take_branch_signal) ? pc_branch_target : pc_plus_4;
+  assign pc_next = (take_branch || pc_src == 2'b01) ? pc_branch_target : 
+                    (pc_src == 2'b10) ? alu_result : pc_plus_4;
 
 
 // control unit
 
-  
+
 
   control_unit cpu_control (
     .control_in(instruction[6:0]),
@@ -84,8 +89,10 @@
     .mem_to_reg(mem_to_reg),
     .alu_op(alu_op),
     .mem_write(mem_write),
-    .alu_src(alu_src),
-    .reg_write(reg_write)
+    .alu_src1(alu_src1),
+    .alu_src2(alu_src2),
+    .reg_write(reg_write),
+    .pc_src(pc_src)
   );
 
 
@@ -105,7 +112,10 @@
     .rs2_data(read_data2)
   );
 
-  assign writeback_data = (mem_to_reg) ? data_read : alu_result;
+  assign writeback_data = (mem_to_reg == 2'b01) ? data_read : 
+                          (mem_to_reg == 2'b10) ? pc_plus_4 : 
+                          (mem_to_reg == 2'b11) ? imm_gen_out : alu_result;
+
   assign data_write = read_data2;
 
 // imm gen
@@ -123,8 +133,8 @@
   
 
   alu cpu_alu (
-    .data_1(read_data1),
-    .data_2((alu_src) ? imm_gen_out : read_data2),
+    .data_1((alu_src1) ?  pc_out : read_data1),
+    .data_2((alu_src2) ? imm_gen_out : read_data2),
     .alu_control(alu_ctrl_out),
     .alu_result(alu_result),
     .zero(zero_flag)

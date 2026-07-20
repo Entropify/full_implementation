@@ -14,7 +14,7 @@
 
  always @(*) begin
 
-    if (alu_op == 2'b00) begin  // I/S-type
+    if (alu_op == 2'b00) begin  // I/S-type (and jalr, jal too)
         alu_control_out = 4'b0010;
     end
 
