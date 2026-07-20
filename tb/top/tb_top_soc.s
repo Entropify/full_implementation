@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Zhiyuan (Jerry) Jiang
+# SPDX-License-Identifier: Apache-2.0
+
 .global _start
 
 _start:

@@ -9,11 +9,11 @@
     input wire [6:0] control_in,
     output reg branch,
     output reg mem_read,
-    output reg [1:0] mem_to_reg, // 00 write alu, 01 write ram, 10 write pc + 4, 11 bypass alu (imm to reg)
+    output reg [1:0] mem_to_reg, // 00 write alu, 01 write ram, 10 write pc + 4, 11 bypass alu (immgen to rd)
     output reg [1:0] alu_op,
     output reg mem_write,
-    output reg alu_src1, //remember that 0 = rs1, 1 = pc
-    output reg alu_src2,
+    output reg alu_src1, //future jerry remember that 0 = rs1, 1 = pc
+    output reg alu_src2, //0 = rs2, 1 = immgen out
     output reg reg_write,
     output reg [1:0] pc_src //remember 00 normal pc+4, 01 pc+imm, 10 alu result for jalr
  );
