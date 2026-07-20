@@ -1,4 +1,4 @@
-# List of stuff todo (27 / 40 prob 37 lowk cus single cycle)
+# List of stuff todo (31 / 40 prob 37 lowk cus single cycle)
  - [x] ADDI  rd, rs1, imm
  - [x] SLTI  rd, rs1, imm
  - [x] SLTIU rd, rs1, imm
