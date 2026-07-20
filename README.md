@@ -18,8 +18,8 @@
  - [x] XOR   rd, rs1, rs2
  - [x] OR    rd, rs1, rs2
  - [x] AND   rd, rs1, rs2
- - [ ] LUI   rd, imm
- - [ ] AUIPC rd, imm
+ - [x] LUI   rd, imm
+ - [x] AUIPC rd, imm
  - [ ] LB    rd, offset(rs1)
  - [ ] LH    rd, offset(rs1)
  - [x] LW    rd, offset(rs1)
@@ -28,8 +28,8 @@
  - [ ] SB    rs2, offset(rs1)
  - [ ] SH    rs2, offset(rs1)
  - [x] SW    rs2, offset(rs1)
- - [ ] JAL   rd, offset
- - [ ] JALR  rd, offset(rs1)
+ - [x] JAL   rd, offset
+ - [x] JALR  rd, offset(rs1)
  - [x] BEQ   rs1, rs2, offset
  - [x] BNE   rs1, rs2, offset
  - [x] BLT   rs1, rs2, offset
