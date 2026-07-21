@@ -20,13 +20,13 @@
  - [x] AND   rd, rs1, rs2
  - [x] LUI   rd, imm
  - [x] AUIPC rd, imm
- - [ ] LB    rd, offset(rs1)
- - [ ] LH    rd, offset(rs1)
+ - [x] LB    rd, offset(rs1)
+ - [x] LH    rd, offset(rs1)
  - [x] LW    rd, offset(rs1)
- - [ ] LBU   rd, offset(rs1)
- - [ ] LHU   rd, offset(rs1)
- - [ ] SB    rs2, offset(rs1)
- - [ ] SH    rs2, offset(rs1)
+ - [x] LBU   rd, offset(rs1)
+ - [x] LHU   rd, offset(rs1)
+ - [x] SB    rs2, offset(rs1)
+ - [x] SH    rs2, offset(rs1)
  - [x] SW    rs2, offset(rs1)
  - [x] JAL   rd, offset
  - [x] JALR  rd, offset(rs1)
