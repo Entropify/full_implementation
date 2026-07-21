@@ -7,7 +7,8 @@
 
 module soc_top (
     input wire clk,
-    input wire rst_n
+    input wire rst_n,
+    output wire halt
 );
 
 
@@ -22,8 +23,9 @@ wire [31:0] instruction;
 wire [31:0] data_address;
 wire [31:0] data_write;
 wire [31:0] data_read;
-wire        mem_write;
-wire        mem_read;
+wire mem_write;
+wire mem_read;
+wire [3:0] write_mask;
 
 // rv32i cpu
 
@@ -38,7 +40,9 @@ rv32i_core cpu (
     .data_write(data_write),
     .data_read(data_read),
     .mem_write(mem_write),
-    .mem_read(mem_read)
+    .mem_read(mem_read),
+    .write_mask(write_mask)
+    .halt(halt)
     );
 
 
@@ -58,6 +62,7 @@ instruction_mem rom (
         .mem_read(mem_read),
         .address(data_address),
         .write_data(data_write),
+        .write_mask(write_mask),
         .read_data(data_read)
     );
     

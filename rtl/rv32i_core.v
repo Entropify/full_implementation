@@ -15,9 +15,13 @@
     output wire [31:0] data_address,         // data mem i/o
     output wire [31:0] data_write,
     input wire [31:0] data_read,
+    output wire [3:0] write_mask,
 
     output wire mem_write,                   // control signals
-    output wire mem_read
+    output wire mem_read,
+
+    output wire halt
+    
   );
 
 // declaring these here because i need them for module instantiations and i don't want icarus to scream at me :(
@@ -41,7 +45,26 @@
 
   wire take_branch_signal;
 
+  wire [31:0] filtered_data;
 
+//load filter
+
+  load_filter cpu_load_filter(
+    .func3(instruction[14:12]),
+    .ram_data(data_read),
+    .byte_offset(alu_result[1:0]),
+    .filtered_data(filtered_data)
+  );
+
+//store mask
+
+  store_mask cpu_store_mask(
+    .func3(instruction[14:12]),
+    .byte_offset(alu_result[1:0]),
+    .rs2_data(read_data2),
+    .write_mask(write_mask),
+    .store_data(data_write)
+  );
 
 // branch comp
 
@@ -92,7 +115,8 @@
     .alu_src1(alu_src1),
     .alu_src2(alu_src2),
     .reg_write(reg_write),
-    .pc_src(pc_src)
+    .pc_src(pc_src),
+    .halt(halt)
   );
 
 
@@ -112,11 +136,10 @@
     .rs2_data(read_data2)
   );
 
-  assign writeback_data = (mem_to_reg == 2'b01) ? data_read : 
+  assign writeback_data = (mem_to_reg == 2'b01) ? filtered_data : 
                           (mem_to_reg == 2'b10) ? pc_plus_4 : 
                           (mem_to_reg == 2'b11) ? imm_gen_out : alu_result;
 
-  assign data_write = read_data2;
 
 // imm gen
 
