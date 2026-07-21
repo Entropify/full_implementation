@@ -1,4 +1,4 @@
-# List of stuff todo (31 / 40)
+# List of stuff todo (40 / 40)
  - [x] ADDI  rd, rs1, imm
  - [x] SLTI  rd, rs1, imm
  - [x] SLTIU rd, rs1, imm
@@ -36,6 +36,6 @@
  - [x] BGE   rs1, rs2, offset
  - [x] BLTU  rs1, rs2, offset
  - [x] BGEU  rs1, rs2, offset
- - [ ] FENCE pred, succ
- - [ ] ECALL
- - [ ] EBREAK
+ - [x] FENCE pred, succ
+ - [x] ECALL
+ - [x] EBREAK
