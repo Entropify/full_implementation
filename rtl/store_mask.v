@@ -42,7 +42,7 @@
 
         else begin
             write_mask = 4'b0000;
-            store_data = 32'b0
+            store_data = 32'b0;
         end
     end
 

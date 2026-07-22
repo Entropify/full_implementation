@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.126 (w)1999-2026 BSI
+[*] Wed Jul 22 08:35:14 2026
+[*]
+[dumpfile] "/mnt/x/full_implementation/sim/tb_load_filter.vcd"
+[dumpfile_mtime] "Wed Jul 22 08:32:03 2026"
+[dumpfile_size] 1589
+[savefile] "/mnt/x/full_implementation/sim/tb_load_filter.gtkw"
+[timestart] 4320
+[size] 1496 931
+[pos] -1 -1
+*-14.000000 43150 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_load_filter.
+[sst_width] 297
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 272
+@28
+tb_load_filter.func3[2:0]
+@24
+tb_load_filter.byte_offset[1:0]
+@23
+tb_load_filter.ram_data[31:0]
+@22
+tb_load_filter.dut.shifted_data[31:0]
+tb_load_filter.filtered_data[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -41,7 +41,7 @@ rv32i_core cpu (
     .data_read(data_read),
     .mem_write(mem_write),
     .mem_read(mem_read),
-    .write_mask(write_mask)
+    .write_mask(write_mask),
     .halt(halt)
     );
 

@@ -1,0 +1,83 @@
+$date
+	Wed Jul 22 04:45:52 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_branch_comp $end
+$var wire 1 ! take_branch $end
+$var reg 32 " data_1 [31:0] $end
+$var reg 32 # data_2 [31:0] $end
+$var reg 3 $ func_3 [2:0] $end
+$scope module dut $end
+$var wire 32 % data_1 [31:0] $end
+$var wire 32 & data_2 [31:0] $end
+$var wire 3 ' func_3 [2:0] $end
+$var reg 1 ! take_branch $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+1!
+$end
+#20000
+b1010 #
+b1010 &
+b1010 "
+b1010 %
+#30000
+0!
+b10100 #
+b10100 &
+#40000
+1!
+b1 $
+b1 '
+#50000
+b101 #
+b101 &
+b11111111111111111111111111111111 "
+b11111111111111111111111111111111 %
+b100 $
+b100 '
+#60000
+b11111111111111111111111111111111 #
+b11111111111111111111111111111111 &
+b101 "
+b101 %
+b101 $
+b101 '
+#70000
+0!
+b101 #
+b101 &
+b11111111111111111111111111111111 "
+b11111111111111111111111111111111 %
+b110 $
+b110 '
+#80000
+1!
+b111 $
+b111 '
+#90000
+0!
+b0 #
+b0 &
+b0 "
+b0 %
+b10 $
+b10 '
+#100000
